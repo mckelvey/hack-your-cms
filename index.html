@@ -1,34 +1,21 @@
 <!doctype html>  
 <html lang="en">
-	
 	<head>
 		<meta charset="utf-8">
-		
-		<title>reveal.js - HTML5 Presentations</title>
-
+		<title>Hack Your CMS — DIY Digital Screens</title>
 		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
-
+		<meta name="author" content="David W. McKelvey">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/clean.css">
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 	</head>
-	
 	<body>
-		
 		<div class="reveal">
-
-			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<h1>Reveal.js</h1>
@@ -242,25 +229,16 @@ function linkify( selector ) {
 					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
 				</section>
 			</div>
-
-			<!-- The navigational controls UI -->
 			<aside class="controls">
 				<a class="left" href="#">&#x25C4;</a>
 				<a class="right" href="#">&#x25BA;</a>
 				<a class="up" href="#">&#x25B2;</a>
 				<a class="down" href="#">&#x25BC;</a>
 			</aside>
-
-			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
-			
 		</div>
-
-		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/js/head.min.js"></script>
-
 		<script>
-			// Load the main reveal.js script
 			head.js( 'js/reveal.js', function() {
 				// Parse the query string into a key/value object
 				var query = {};
@@ -282,28 +260,25 @@ function linkify( selector ) {
 				// Full list of configuration options available here:
 				// https://github.com/hakimel/reveal.js#configuration
 				Reveal.initialize({
-					controls: true,
+					controls: false,
 					progress: true,
 					history: true,
-
-					theme: query.theme || 'default', // default/neon/beige
-					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+					mouseWheel: true,
+					rollingLinks: false,
+					theme: 'clean',
+					transition: 'default'
 				});
 			} );
 			
 			// Load third party scripts
 			head.js( 'lib/js/classList.js' );
 			head.js( 'lib/js/highlight.js', function() {
-				// Fire off syntax highlighting for potential code samples in the slides
 				hljs.initHighlightingOnLoad();
 			} );
 
-			// If we're runnning the notes server we need to include some additional JS
-			// TODO Is there a better way to determine if we're running the notes server?
-			if( window.location.host === 'localhost:1947' ) {
+			if( window.location.host === 'david.mckelveycreative.com:1969' ) {
 				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
 			}
 		</script>
-		
 	</body>
 </html>
