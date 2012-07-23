@@ -9,80 +9,94 @@
  * BEIGE THEME
  *********************************************/
 
-.theme-beige body {
-	color: #333;
+/*********************************************
+ * CLEAN THEME
+ *********************************************/
 
-	background: #f7f3de;
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(247,242,211,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(247,242,211,1)));
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-}
-
-.theme-beige .reveal h1,
-.theme-beige .reveal h2,
-.theme-beige .reveal h3,
-.theme-beige .reveal h4,
-.theme-beige .reveal h5,
-.theme-beige .reveal h6 {
-	color: #333;
-	text-shadow: none;
-}
-
-.theme-beige .reveal a,
-.theme-beige .reveal a:hover,
-.theme-beige .reveal .controls a.enabled {
-	color: #8b743d;
-}
-
-.theme-beige .reveal .progress span,
-.theme-beige .reveal .roll span:after {
-	background: #8b743d;
-}
-
-.theme-beige .reveal a.image:hover img {
-	border-color: #8b743d;
-}
-
-/* Tag Declarations */
 .theme-clean body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-/*
-	font-size: 36px;
-	font-weight: 200;
-	letter-spacing: -0.02em;
-	color: #eee;
-*/
+	font-size: 42px;
+  font-family: "HelveticaNeueLTStd-Cn";
+  font-weight: 200;
+  font-stretch: condensed;
 	background: #0ea3d9;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(14,163,217,1)), color-stop(100%, rgba(37,180,232,1))));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+}
+
+/* headers */
+.theme-clean .reveal h1,
+.theme-clean .reveal h2,
+.theme-clean .reveal h3,
+.theme-clean .reveal h4,
+.theme-clean .reveal h5,
+.theme-clean .reveal h6 {
+	color: #333;
+	font-family: 'Calluna Sans';
+	letter-spacing: -0.05em;
+	font-weight: 600;
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+	text-transform: none;
+}
+
+/* links */
+.theme-clean .reveal a,
+.theme-clean .reveal a:hover,
+.theme-clean .reveal .controls a.enabled {
+	color: #baddff;
+}
+
+/* quotes */
+.theme-clean blockquote {
+  padding: 0.5em 1em;
+  color: #333;
+  font-size: 36px;
+  line-height: 1.35;
+  font-style: normal;
+  background: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border: none;
 /*
-	background: -moz-radial-gradient(center, ellipse cover, rgba(186,221,255,1) 0%, rgba(186,221,255,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(85,90,95,1)), color-stop(100%,rgba(28,30,32,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(186,221,255,1) 0%, rgba(186,221,255,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(186,221,255,1) 0%, rgba(186,221,255,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(186,221,255,1) 0%, rgba(186,221,255,1) 100%);
-	background: radial-gradient(center, ellipse cover, rgba(186,221,255,1) 0%, rgba(186,221,255,1) 100%);
+  background: rgba(255, 255, 255, 0.15);
+  -moz-box-shadow:rgba(0, 0, 0, 0.24) 0 0 3px 1px;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.24) 0 0 3px 1px;
+  -o-box-shadow:rgba(0, 0, 0, 0.24) 0 0 3px 1px;
+  box-shadow:rgba(0, 0, 0, 0.24) 0 0 3px 1px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
 */
+}
+.reveal blockquote:before {
+  position: absolute;
+  left: 0;
+  margin-top: -36px;
+	content: '“';
+	font-family: 'Calluna Sans';
+	font-size: 90px;
+	text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.33);
+}
+.reveal blockquote:after {
+  position: absolute;
+  margin-top: -36px;
+	content: '”';
+	font-family: 'Calluna Sans';
+	font-size: 90px;
+	text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.33);
 }
 
 /* Progress Bar */
 .theme-clean .reveal .progress span {
 	background: #fff;
-}
-
-.reveal h1 {
-	text-shadow: 0 1px 0 #ccc,
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 20px 20px rgba(0,0,0,.15);
 }
 
 /*
