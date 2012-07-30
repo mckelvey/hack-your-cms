@@ -6,8 +6,44 @@
  */
 
 /*********************************************
- * BEIGE THEME
+ * DEFAULT ELEMENT STYLES
  *********************************************/
+
+.reveal .slides section {
+  padding-top: 210px;
+}
+
+.reveal .slides section.top {
+  padding-top: 0;
+}
+
+.reveal .wrap.iframe {
+	width: 864px;
+	height: 486px;
+	overflow: hidden;
+}
+
+.reveal iframe {
+  width: 1920px;
+  height: 1080px;
+	border: none;
+	-moz-transform: scale(0.45);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(0.45);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(0.45);
+	-webkit-transform-origin: 0 0;
+}
+
+.reveal pre {
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.reveal code {
+  padding-left: 1.5em;
+  width: 300%;
+}
 
 /*********************************************
  * CLEAN THEME
@@ -18,13 +54,7 @@
   font-family: "HelveticaNeueLTStd-Cn";
   font-weight: 200;
   font-stretch: condensed;
-	background: #0ea3d9;
-	background: -moz-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(14,163,217,1)), color-stop(100%, rgba(37,180,232,1))));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
-	background: radial-gradient(center, ellipse cover, rgba(14,163,217,1) 0%, rgba(37,180,232,1) 100%);
+	background: #0f8dd7;
 }
 
 /* headers */
@@ -46,7 +76,7 @@
 .theme-clean .reveal a,
 .theme-clean .reveal a:hover,
 .theme-clean .reveal .controls a.enabled {
-	color: #baddff;
+	color: #91c8ff;
 }
 
 /* quotes */
@@ -97,69 +127,4 @@
 /* Progress Bar */
 .theme-clean .reveal .progress span {
 	background: #fff;
-}
-
-/*
-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-font-family: calluna-sans-1, calluna-sans-2, sans-serif;
-
-font-family: "HelveticaNeueCondensed", "HelveticaNeue-Condensed", "Helvetica Neue Condensed", "HelveticaNeueRomanCondensed", "HelveticaNeue-Roman-Condensed", "Helvetica Neue Roman Condensed", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
-font-weight:400;
-font-stretch:condensed;
-
-font-family: "HelveticaNeueMediumCondensed", "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medium Condensed", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
-font-weight:500;
-font-stretch:condensed;
-
-font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
-font-weight:600;
-font-stretch:condensed;
-*/
-
-/*********************************************
- * CONTROLS
- *********************************************/
-
-.reveal .controls {
-	display: none;
-	position: fixed;
-	width: 100px;
-	height: 100px;
-	z-index: 30;
-
-	right: 0;
-	bottom: 0;
-}
-	
-	.reveal .controls a {
-		font-size: 30px;
-		position: absolute;
-		opacity: 0.1;
-		color: #fff;
-	}
-
-/*********************************************
- * DEFAULT STATES
- *********************************************/
-
-.state-background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: rgba( 0, 0, 0, 0 );
-
-	-webkit-transition: background 800ms ease;
-	   -moz-transition: background 800ms ease;
-	    -ms-transition: background 800ms ease;
-	     -o-transition: background 800ms ease;
-	        transition: background 800ms ease;
-}
-.alert .state-background {
-	background: rgba( 200, 50, 30, 0.6 );
-}
-.soothe .state-background {
-	background: rgba( 50, 200, 90, 0.4 );
-}
-.blackout .state-background {
-	background: rgba( 0, 0, 0, 0.6 );
 }

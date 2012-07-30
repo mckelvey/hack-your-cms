@@ -21,7 +21,7 @@ io.sockets.on('connection', function(socket) {
 });
 
 app.configure(function() {
-	[ 'css', 'js', 'plugin', 'lib' ].forEach(function(dir) {
+	[ 'css', 'js', 'images', 'plugin', 'lib', 'prototype-local' ].forEach(function(dir) {
 		app.use('/' + dir, staticDir(opts.baseDir + dir));
 	});
 });
@@ -39,6 +39,7 @@ app.get("/notes/:socketId", function(req, res) {
 	});
 	// fs.createReadStream(opts.baseDir + 'speakernotes/notes.html').pipe(res);
 });
+
 
 // Actually listen
 app.listen(opts.port || null);

@@ -2,233 +2,796 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hack Your CMS — DIY Digital Screens</title>
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="David W. McKelvey">
+		<title>Hack Your CMS for Good — DIY Digital Screens</title>
+		<meta name="description" content="Hear a story about how we improved our internal and external communications by building campus digital signage into our CMS LiveWhale so that it could drive content to large TV screens in real-time." />
+		<meta name="keywords" content="custom application, content management system, CMS, White Whale, LiveWhale, education, API, RSS, digital signage, display, screen, real-time, push notifications, node, redis, javascript, webkit, github, open source" />
+		<meta name="author" content="David W. McKelvey" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/clean.css">
+		<link rel="stylesheet" href="lib/css/dark.css">
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="state-background"></div>
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
+			<article class="slides">
+
+				<section class="top">
+					<h1>Hack Your CMS for Good</h1>
+					<h3 class="invested">A Story About DIY Digital Signage</h3>
+					<p>
+  					eduWeb — 1 August 2012
+					</p>
+					<p>
+  				  <span class="name">David W. McKelvey</span>
+  				  <span class="title">Director of Product Development</span>
+  				  <a href="http://twitter.com/davidmckelvey" class="twitter">@davidmckelvey</a>
+  				  <a href="http://whitewhale.net/" class="website work">White Whale Web Services</a>
+  				  <a href="http://david.mckelveycreative.com" class="website personal">mckelvey/creative</a>
+					</p>
+
+					<aside class="notes">
+					  <ul>
+					    <li>Hello!</li>
+					    <li>As my introduction noted, my tinkering got me into trouble. I am now a vendor.</li>
+					    <li>keep the LiveWhale references to a minimum: while I was of course using LiveWhale CMS to drive these screens, I’ll keep the LiveWhale-specific information to a minimum.</li>
+					    <li>how/why titled this</li>
+					  </ul>
+					</aside>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
 					</script>
 				</section>
-				
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,<br/>
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+				<section class="centered single-line">
+				  <h3>Me</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I ran my shop like a startup</li>
+  				    <li>not afraid of change; not afraid to ask why</li>
+  				    <li>I’m just enough of a good coder to be dangerous.</li>
+  				    <li>I really stay abreast of the industry and am good at connecting dots</li>
+  				    <li>I’m good at the politics; calm</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
+				  <h3>Takeaways, but I’m not calling it that</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>telling this story, you’ll learn from my successes and failures</li>
+  				    <li>when to consider custom applications</li>
+  				    <li>how you can use your CMS for related content management tasks</li>
+  				    <li>bet small, build small, MVP of eric ries</li>
+  				    <li>inspire you to do something good for your institutions</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
+				  <h3>Challenge, never a Problem</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>most campuses struggle with how to improve internal (faculty, staff, student) communication in the digital age</li>
+  				    <li>email lists get ignored</li>
+  				    <li>force people through a portal that often has bad UI (webadvisor, oops)</li>
+  				    <li>are you really going to be that intimate to SMS, no</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
+				  <h3>Challenge, never a Problem</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>and yet, we know there are fantastic events on every campus — every campus — that are sparsely attended</li>
+  				    <li>if you could tap just a portion of that rich stream, not only could you improve attendance, involvement, choice, but you could also give a prospective student a more accurate impression of campus life</li>
+  				    <li>well — paper posters work</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+				  <h3>Background, digital screens</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>digital screens, across all three campuses, in every dorm, pardon me, residence hall</li>
+  				    <li>as want in higher ed, bring a bunch of people together, see some demos</li>
+  				    <li>interesting to think back to these demos now that I’m on the other side of the table</li>
+  				  </ul>
+  				</aside>
 				</section>
 				
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+				  <h3>Background, digital screens, with horror</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>Microsoft-based systems</li>
+  				    <li>difficult user experience, training nightmare</li>
+  				    <li>overly granular security</li>
+  				    <li>poor visual choices, too much to look at</li>
+  				  </ul>
+  				</aside>
+				</section>
+				
+				<section class="centered double-line">
+				  <h3>Background, digital screens, saving grace</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>really expensive</li>
+  				    <li>maybe 30-odd screens showing various content, with at least some touch screens — it was the works</li>
+  				    <li>leadership was like hell no, half mil</li>
+  				    <li>I did a quiet cheer and went back to work</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+				  <h3>Are Posters Green?</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>students were interested in some other form to get word out about their events</li>
+  				    <li>100-odd student groups</li>
+  				    <li>being “Green” and buying green power for the entire institution</li>
+  				    <li>and back again were digital screens</li>
+  				  </ul>
+  				</aside>
 				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+				<section>
+				  <h3>Here we go again&hellip;</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>another demo</li>
+  				    <li>but less expensive</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Here we go again&hellip;, but new criteria</h3>
+				  <p>nice to haves, but not required — meaning a much smaller expectation</p>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>no touchscreens</li>
+  				    <li>maybe a half-dozen screens</li>
+  				    <li>no need for EMS integration</li>
+  				    <li>we only care about importing our RSS from our web CMS</li>
+  				    <li>students should have some access</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Here we go again&hellip;, why not this?</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>all set to make a deal, they are the cheapest</li>
+  				    <li>no</li>
+  				    <li>the AVP in charge of this endeavor then asked me, what would I do?</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>We could use the CMS, couldn’t we?</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>what if we just got mac minis, connected them to giant TVs and had them run the browser at full screen</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Benefits</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>the minimum content we must present is already in CMS (ditched MC)</li>
+  				    <li>no new training for anyone</li>
+  				    <li>authentication is already there</li>
+  				    <li>students would have access (student group sites)</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section class="top">
+				  <h3>The Prototype</h3>
+				  <div class="wrap iframe">
+				    <iframe src="http://localhost:1969/prototype-local"></iframe>
+				  </div>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>truth was I didn’t really know that this would work, I just knew that it had the potential</li>
+  				    <li>and that there were multiple possibilities for how it could work, giving me some flexibility</li>
+  				    <li>design and development, so now we’re going to get in a bit deeper</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>The Prototype, a CMS does this</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>some form of data storage</li>
+  				    <li>some form of application or software that can assemble static and dynamic content for a site editor to edit and viewer to view</li>
+  				    <li>admin, you have the ability to create other output forms</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>The Prototype, a CMS admin</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>thankfully, more and more CMSs have awakened to the understanding that this is your data</li>
+  				    <li>data portability, wordpress</li>
+  				    <li>and as interoperability becomes more important, APIs are more and more common</li>
+  				    <li>admin, you have the ability to create/use forms data output</li>
+  				    <li>at worst, you probably at least have RSS</li>
+  				    <li>even perhaps just make a web page to bring up in the browser</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Show Prototype</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>goes and gets the next 50 events from Lewis &amp; Clark’s LiveWhale API, json</li>
+  				    <li>shows them in a very simple format</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section class="top">
+				  <h3>Show Prototype, HTML</h3>
+					<pre class="html"><code contenteditable>
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; 
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt; 
+	&lt;title&gt;Lewis &amp; Clark Campus Display System&lt;/title&gt;
+	&lt;link rel="icon" type="image/vnd.microsoft.icon" href="//www.lclark.edu/favicon.ico" /&gt; 
+	&lt;link href="signage.css" media="screen" rel="stylesheet" type="text/css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;section id="announcements"&gt;&lt;/section&gt;
+
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="jquery.timeago.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="digital.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 					</code></pre>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
 				</section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-    
-    var nodes = document.querySelectorAll( selector );
+				<section class="top">
+				  <h3>Show Prototype, Code</h3>
+					<pre class="coffeescript"><code contenteditable>
+$(document).ready ->
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-      var node = nodes[i];
+  queue = []
+  running = null
+  buffering = null
+  runTime = 10000
+  bufferTime = 60000
+  errorMax = 3
+  withImagesOnly = false
+  stopAfter = 50
+  screenWidth = $(window).width()
+  screenHeight = $(window).height()
+  shown = 0
+  alertLogMessages = false
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+  days = [
+    'Sunday'
+    'Monday'
+    'Tuesday'
+    'Wednesday'
+    'Thursday'
+    'Friday'
+    'Saturday'
+  ]
+  monthsAbbreviated = [
+    'Jan.'
+    'Feb.'
+    'Mar.'
+    'Apr.'
+    'May'
+    'June'
+    'July'
+    'Aug.'
+    'Sept.'
+    'Oct.'
+    'Nov.'
+    'Dec.'
+  ]
+  jQuery.timeago.settings.strings = {
+    prefixAgo: 'updated '
+    prefixFromNow: null
+    suffixAgo: "ago"
+    suffixFromNow: "from now"
+    seconds: "less than a minute"
+    minute: "about a minute"
+    minutes: "%d minutes"
+    hour: "about an hour"
+    hours: "about %d hours"
+    day: "a day"
+    days: "%d days"
+    month: "about a month"
+    months: "%d months"
+    year: "about a year"
+    years: "%d years"
+    numbers: []
   }
-}
+
+  requiredFields = [
+    'id'
+    'updated_at'
+    'title'
+    'summary'
+    'group'
+    'link'
+  ]
+  requiredEventFields = [
+    'start_time'
+    'location'
+  ]
+
+  log = (message) ->
+    console.log message if typeof console isnt 'undefined'
+    alert message if alertLogMessages
+
+  pad = (n) ->
+    return '0' + n if n < 10
+    return n
+
+  fromISO8601 = (s) ->
+    d = new Date s
+    if isNaN(d)
+      minutesOffset = 0
+      struct = /^(\d{4}|[+\-]\d{6})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3,}))?)?(?:(Z)|([+\-])(\d{2})(?::?(\d{2}))?))?/.exec(s)
+      if struct[8] isnt 'Z'
+        minutesOffset = (+struct[10]) * 60 + (+struct[11])
+        if struct[9] is '+'
+          minutesOffset = 0 - minutesOffset
+      d = Date.UTC(+struct[1], +struct[2] - 1, +struct[3], +struct[4], +struct[5] + minutesOffset, +struct[6], (if typeof struct[7] is 'undefined' then 0 else +struct[7].substr(0, 3)))
+      d = new Date d if typeof d is 'number'
+    return d
+
+  toISO8601 = (d) ->
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()) + 'T' + pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds()) + 'Z'
+
+  validated = (item=null, kind='event') ->
+    return null if item is null
+    for i of requiredFields
+      return null if typeof item[i] is undefined or item[i] is null
+    if kind is 'event'
+      for i of requiredEventFields
+        return null if typeof item[i] is undefined or item[i] is null
+    now = new Date()
+    for i of item
+      switch i
+        when 'id'
+          item[i] = parseInt item[i]
+        when 'start_time', 'end_time', 'updated_at'
+          item[i] = fromISO8601(item[i])
+          return null if i is 'start_time' and item[i].getTime() < now.getTime()
+        when 'group', 'author'
+          item[i].id = parseInt(item[i].id)
+        when 'repeats'
+          item[i].repeats_until = fromISO8601(item[i].repeats_until) if item[i] is not null and item[i].repeats_until is not null
+    return item
+
+  queueUp = (item=null) ->
+    return false if item is null
+    return false if withImagesOnly and (!item.images? or !item.images[0]?)
+    log 'inserting/updating item in queue'
+    log item
+    for i of queue
+      if queue[i].id == item.id
+        queue[i] = item
+        return true
+    queue.push item
+    return true
+
+  getShortenedLinkFor = (item=null) ->
+    return false if item is null
+    $.ajax({
+      url: 'http://api.bitly.com/v3/shorten?login=lcweblab&apiKey=[your-api-key]&longUrl=' + encodeURI(item.link) + '&format=json'
+      method: 'GET'
+      dataType: 'json'
+      success: (data, textStatus, jqXHR) ->
+        log 'received data from bit.ly'
+        log data
+        if data? and data.data? and data.data.url?
+          $('article#' + item.id).find('.link').html(data.data.url + '&lt;img src="' + data.data.url + '.qrcode" alt="QR Code" /&gt;')
+      error: (jqXHR, textStatus, errorThrown) ->
+        log "received error from bit.ly #{textStatus}"
+    })
+    return null
+
+  isThisWeek = (d) ->
+    now = new Date()
+    log d.getTime() 
+    log now.getTime()
+    log (d.getTime() - now.getTime())
+    return ((d.getTime() - now.getTime()) < 604800000)
+
+  isToday = (d) ->
+    now = new Date()
+    return (isThisWeek(d) and d.getDay() is now.getDay())
+
+  isTomorrow = (d) ->
+    now = new Date()
+    return (isThisWeek(d) and ((d.getDay() - 1) is now.getDay() or (d.getDay() is 0 and now.getDay() is 6)))
+
+  cssForDay = (d) ->
+    return '' if not isThisWeek(d)
+    return ' today' if isToday(d)
+    return ' tomorrow' if isTomorrow(d)
+    return ' within-a-week'
+
+  formatDay = (d) ->
+    return 'Today' if isToday(d)
+    return 'Tomorrow' if isTomorrow(d)
+    return days[d.getDay()] if isThisWeek(d)
+    return "#{monthsAbbreviated[d.getMonth()]} #{d.getDate()}"
+
+  formatTime = (d, meridian=true) ->
+    if d.getHours() > 12
+      return "#{(d.getHours() - 12)}:#{pad(d.getMinutes())}#{(' p.m.' if meridian)}"
+    else
+      return "#{d.getHours()}:#{pad(d.getMinutes())}#{(' a.m.' if meridian)}"
+
+  formatTimeFor = (item=null) ->
+    return '' if item is null
+    if end_time?
+      if item.start_time.getDay() is item.end_time.getDay()
+        if item.start_time.getHours() < 12 and item.end_time.getHours() > 12
+          return "#{formatTime(item.start_time)} &ndash; #{formatTime(item.end_time)}"
+        else
+          return "#{formatTime(item.start_time, false)}&ndash;#{formatTime(item.end_time)}"
+      else
+        return "#{formatTime(item.start_time)} &ndash; #{formatTime(item.end_time)}"
+    else
+      return 'All Day' if item.start_time.getHours() is 0 and item.start_time.getMinutes() is 0
+      return formatTime(item.start_time)
+
+  sendToDisplay = ->
+    return null if queue.length is 0
+    buffer() if queue.length < 3
+    stopAfter -= 1
+    if stopAfter < 0
+      clearInterval(running)
+      clearInterval(buffering)
+      log 'stopping'
+      return null
+    item = queue.shift()
+    shown += 1
+    log 'generating output'
+    output = '
+    &lt;article id="' + item.id + '" style="opacity: 0;left:' + (screenWidth * shown + 18) + 'px;width: ' + (screenWidth-36) + 'px;height: ' + (screenHeight-36) + 'px;"&gt;
+      ' + (if item.images? and item.images[0]? then '&lt;img src="' + item.images[0].url + '" alt="' + item.images[0].alt + '" /&gt;' else '') + '
+      &lt;div&gt;
+        &lt;h2 class="when' + cssForDay(item.start_time) + '"&gt;
+          &lt;span class="day"&gt;' + formatDay(item.start_time) + '&lt;/span&gt;
+          &lt;span class="time"&gt;' + formatTimeFor(item) + '&lt;/span&gt;
+        &lt;/h2&gt;
+        &lt;h3 class="what"&gt;
+          &lt;span class="title">' + item.title + '&lt;/span&gt;
+        &lt;/h3&gt;
+        &lt;h4 class="where"&gt;
+          &lt;span class="location"&gt;' + item.location + '&lt;/span&gt;
+        &lt;/h4&gt;
+        &lt;p class="extra-details"&gt;
+          ' + (if item.repeat? and item.repeat.next_start_time? then '&lt;span class="repeats_next"&gt;' + item.repeat.next_start_time + '&lt;/span&gt;' else '') + '
+        &lt;/p>
+        ' + (if item.summary? and item.summary.length > 0 then '&lt;div class="about"&gt;&lt;p&gt;' + item.summary.replace(/(&lt;([^&gt;]+)&gt;)/ig, ' ') + '&lt;/p&gt;&lt;/div&gt;' else '') + '
+        &lt;h4 class="contact">
+          &lt;span class="school">' + item.group.school + '&lt;/span&gt;
+          &lt;span class="group">' + item.group.name + '&lt;/span&gt;
+          &lt;span class="link">' + item.link.replace(/^http(s?):\/\/(www)?\./i, '').replace(/\/(\d+)-?[a-z\-]+$/i, '/$1') + '&lt;/span&gt;
+        &lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;'
+    $("#announcements").append(output)
+    $("#" + item.id).animate({
+      opacity: 1
+    }, 1000).prev().animate({
+      opacity: 0
+    }, 500)
+    $("#announcements").animate({
+      left: '-=' + screenWidth
+    }, 1500, 'easeInOutBack')
+    getShortenedLinkFor item
+    return null
+
+  startDisplaying = ->
+    if !running?
+      log 'running...'
+      sendToDisplay()
+      running = setInterval(`function(){sendToDisplay();}`, runTime) 
+    return null
+
+  buffer = ->
+    log 'buffering...'
+    $.ajax({
+      url: "https://www.lclark.edu/api/v1/events/image_width/600/limit/50/json"
+      method: 'GET'
+      dataType: 'jsonp'
+      success: (data, textStatus, jqXHR) ->
+        log 'received data'
+        for i of data
+          queueUp validated data[i]
+        startDisplaying()
+      error: (jqXHR, textStatus, errorThrown) ->
+        log 'received error'
+        errorMax -= 1
+        clearInterval(buffering) if errorMax < 0
+    })
+
+  startBuffering = ->
+    if !buffering?
+      buffer()
+      buffering = setInterval(`function(){buffer();}`, bufferTime)
+    return null
+
+  startBuffering()
 					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>took like a day or two</li>
+  				    <li>written in coffeescript, which is just sugar for javascript</li>
+  				    <li>uses jQuery, jQuery.timeago</li>
+  				    <li>walk through code</li>
+  				    <li>only ~250 lines</li>
+  				    <li>that’s it</li>
+  				  </ul>
+  				</aside>
 				</section>
 				
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
+				  <h3>Show Prototype, key issues</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>gave me something I could show others</li>
+  				    <li>I’ve made visual changes based in their response, so this is the revised prototype</li>
+  				    <li>really, I could almost stop here — all the basics are covered</li>
+  				    <li>but I really wanted this to be helpful to the person walking by and that meant I needed to improve three key issues</li>
+  				    <li>I had six more months, so I wasn’t worried</li>
+  				  </ul>
+  				</aside>
 				</section>
 
 				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
+				  <h3>Location</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I wanted to keep the events to those only available on campus</li>
+  				    <li>LiveWhale events have a location field, and I had thought to do some pattern matching to determine if the event matched a campus name, but that would be somewhat icky at best</li>
+  				    <li>what would be better, well, geolocation would be better</li>
+  				    <li>so, White Whale and I split the cost of adding geolocation to LiveWhale (explain)</li>
+  				    <li>I would just have to require that events to appear on the screens be geolocated</li>
+  				    <li>as it turns out — although the geolocation is much more powerful, I eventually chose to make that within six miles of Pioneer Courthouse Square in downtown portland</li>
+  				  </ul>
+  				</aside>
 				</section>
-				
+
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
+				  <h3>Aggregation</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>three campuses, and some events would not really be open to others</li>
+  				    <li>the authorization unit of measure in LiveWhale is the group, which doesn’t have to be but often equates to a standard site</li>
+  				    <li>so, when setting up LiveWhale I had prefixed each group name with a short name</li>
+  				    <li>and although that’s a bit hacky, it well works</li>
+  				    <li>there would be three “channels,” each being a combination of the the overarching institutional offices mixed with the school specific</li>
+  				    <li>what’s more, because of the ability to share events in LiveWhale, if a law student group happened to be doing a shared event with an undergraduate student group, they needed only to share the event between them to get it on both law and undergraduate screens, leaving it off the graduate screens</li>
+  				  </ul>
+  				</aside>
 				</section>
-				
+
 				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
+				  <h3>Access and Moderation</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>going back to the original criteria, this needed to be available to students</li>
+  				    <li>students are busy, and so events would often only get planned at the last minute, so we needed a quick way to get these on the screens</li>
+  				    <li>so we’d either have to really be on top of moderation 24/7, which would suck, or we’d have to allow it to be unmoderated</li>
+  				    <li>we chose unmoderated — with the full knowledge that a) all the existing student honor and technology policies already applied here and that b) unlike with paper posters, we’d know who posted what and when, since the CMS logs those actions by user</li>
+  				    <li>there was some concern someone would post something stupid during commencement or the like, but it hasn’t happened yet</li>
+  				  </ul>
+  				</aside>
 				</section>
-				
+
 				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
+				  <h3>Still could have modified the prototype, but</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I wanted one additional thing, separation/encapsulation</li>
+  				    <li>it’s not like the CMS ever went down, but I like to insulate where I can</li>
+  				    <li>this is extra credit</li>
+  				  </ul>
+  				</aside>
 				</section>
-			</div>
+
+				<section>
+				  <h3>Node Server</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>to get websockets<li>
+  				    <li>because it was fun<li>
+  				    <li>a lot like getting a new tool when you do a household project</li>
+  				    <li>always good to learn new things in our industry</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>NoSQL, Redis</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>like a cache layer</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Polling, ick</h3>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Instagram Real-time, PubSubHubBub</h3>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>LiveWhale Push</h3>
+				  <p>code</p>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>already on the screens by the time you save</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Hiccups</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>the president decided on a different date</li>
+  				    <li>seven days to build the final version, build small</li>
+  				    <li>end result — trial by fire</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Screens</h3>
+				  <p>live</p>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Screens</h3>
+				  <p>edit?</p>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Screens</h3>
+				  <p>code</p>
+				  <aside class="notes">
+  				  <ul>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Net</h3>
+				  <p>~$30k</p>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>staff time, undoubtedly more than with a vendor, maybe? training, installation, etc.</li>
+  				    <li>physical equipment at each location ran about $1,200, since we had a big run up, we were able to get all the TVs from Dell during the big holiday sales and bundle the macmini’s into our annual computer order</li>
+  				    <li>surprise cost — installation — contracted out mostly and cost on average as much as the physical equipment</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Over the past year</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I’ve spent maybe a week’s time over the past year</li>
+  				    <li>events-based programming, pulling down 20mb/s</li>
+  				    <li>event duplication</li>
+  				    <li>daylight savings</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Maintenance Fear</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>small codebase, even with the extra credit approach</li>
+  				    <li>conventional technologies, HTML, CSS, jQuery/javascript — they’ll be able to have someone maintain this or add to it — most any front-end developer would be able to parse this</li>
+  				    <li>maybe: it took me only an hour or two to add the ability to see this off campus</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>what</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I took a bunch of small bets, nothing was rocket science, nothing that isn’t doable with your CMS</li>
+  				    <li>a different path perhaps, a different set of features, but the same general principle as building a minimum value product</li>
+  				    <li>control expectations</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>When is it good to DIY?</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>I could use conventional technologies — sustainable</li>
+  				    <li>costs were significantly better</li>
+  				    <li>benefits were of significant value</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Surprise!</h3>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>something about the physicality, but these drove interest in getting events into the CMS</li>
+  				    <li>training requests jumped, our office hours visits increased</li>
+  				    <li>and because the authoritative system is the web CMS, everything also went online into our calendar where any prospective student would see the events as well</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+				<section>
+				  <h3>Questions?</h3>
+				  <p>contact</p>
+				  <aside class="notes">
+  				  <ul>
+  				    <li>say thanks for hanging with me, letting me tell this story</li>
+  				  </ul>
+  				</aside>
+				</section>
+
+			</article>
+
 			<aside class="controls">
 				<a class="left" href="#">&#x25C4;</a>
 				<a class="right" href="#">&#x25BA;</a>
@@ -236,34 +799,22 @@ function linkify( selector ) {
 				<a class="down" href="#">&#x25BC;</a>
 			</aside>
 			<div class="progress"><span></span></div>
+
 		</div>
 		<script src="lib/js/head.min.js"></script>
 		<script>
 			head.js( 'js/reveal.js', function() {
-				// Parse the query string into a key/value object
 				var query = {};
 
 				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
 					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
 				} );
 
-				// Fires when a slide with data-state=customevent is activated
-				Reveal.addEventListener( 'customevent', function() {
-					console.log( '"customevent" has fired' );
-				} );
-
-				// Fires each time a new slide is activated
-				Reveal.addEventListener( 'slidechanged', function( event ) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				} );
-
-				// Full list of configuration options available here:
-				// https://github.com/hakimel/reveal.js#configuration
 				Reveal.initialize({
 					controls: false,
 					progress: true,
 					history: true,
-					mouseWheel: true,
+					mouseWheel: false,
 					rollingLinks: false,
 					theme: 'clean',
 					transition: 'default'
@@ -272,9 +823,9 @@ function linkify( selector ) {
 			
 			// Load third party scripts
 			head.js( 'lib/js/classList.js' );
-			head.js( 'lib/js/highlight.js', function() {
+			head.js( 'lib/js/highlight.js', function(){
 				hljs.initHighlightingOnLoad();
-			} );
+			});
 
 			if( window.location.host === 'localhost:1969' ) {
 				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
